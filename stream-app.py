@@ -2,12 +2,12 @@ import streamlit
 streamlit.title   ('Мое первое приложение на Phyton :)')
 streamlit.header  ('Достался адский сценарий про здоровую еду...')
 
-streamlit.header  ('🥑    Меню на завтрак')
+streamlit.header  ('Меню на завтрак')
 streamlit.text    ('🥣    Omega 3 & Скучная жратва')
 streamlit.text    ('🥗    Шпинат & прочий ацтой')
-streamlit.text    ('🍞  Яйца - единственное, что можно есть')
+streamlit.text    ('🍞    Яйца - можно есть')
 
-streamlit.header('🍌🥭 Собери рецепт своего Смусси... 🥝🍇')
+streamlit.header('🥭 Собери рецепт своего Смусси... 🥝')
 
 import pandas
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -21,6 +21,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 #New section to display fruityvice api response
+streamlit.header  ('Типа совет дня...')
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-streamlit.text(fruityvice_response)
+streamlit.text(fruityvice_response.json())
