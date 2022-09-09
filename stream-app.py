@@ -21,14 +21,14 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 # Let's put a pick list here so they can pick the fruit they want to include 
 fruits_selected = streamlit.multiselect("Выбери фрукты для Смусси:", list(my_fruit_list.index),['Avocado','Cantaloupe'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
-##streamlit.dataframe(my_fruit_list)
+# streamlit.dataframe(my_fruit_list)
 # dsplay the table on the page
 streamlit.dataframe(fruits_to_show)
 
 # New section to display fruityvice api response
 streamlit.header('Типа совет дня...')
 try:
-fruit_choice = streamlit.text_input("О каком фрукте показать инфу?")
+fruit_choice = 'Kiwi' # streamlit.text_input('О каком фрукте показать инфу?')
 if not fruit_choice:
     streamlit.error("Выбери фрукт! Че не понятно то?")
   else:
