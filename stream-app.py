@@ -28,7 +28,7 @@ streamlit.dataframe(fruits_to_show)
 # New section to display fruityvice api response
 streamlit.header('Типа совет дня...')
 try:
-# fruit_choice = streamlit.text_input('О каком фрукте показать инфу?')
+fruit_choice = streamlit.text_input("О каком фрукте показать инфу?")
   if not fruit_choice:
     streamlit.error("Выбери фрукт! Че не понятно то?")
   else:
