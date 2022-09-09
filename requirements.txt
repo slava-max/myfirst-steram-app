@@ -1,3 +1,2 @@
 # requirements.txt
-python --version
-# snowflake-connector-phyton
+snowflake-connector-python==2.7.9
