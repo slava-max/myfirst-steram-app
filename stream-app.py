@@ -26,10 +26,10 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 # New section to display fruityvice api response
-streamlit.header  ('Типа совет дня...')
+streamlit.header('Типа совет дня...')
 try:
 fruit_choice = streamlit.text_input('О каком фрукте хочешь получить инфу?')
-  if not fruit_choise:
+  if not fruit_choice:
     streamlit.error("Выбери фрукт! Че не понятно то?")
   else
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
