@@ -59,5 +59,11 @@ if streamlit.button('Get Fruil Load List'):
 # do not run anything after that = troubleshooting
 streamlit.stop()
 
+# Allow the end user to ad a fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Jackfruit')
 streamlit.write('Thanks for adding ', add_my_fruit)
+
+# This will not work correctly but for L&T purposes...
+my_cur.execute("insert into fruit_load_list values ('updated froms streamlit')")
+
+
