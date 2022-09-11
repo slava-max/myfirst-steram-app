@@ -57,7 +57,7 @@ if streamlit.button('Get Fruil Load List'):
     streamlit.dataframe(my_data_rows)
 
 # do not run anything after that = troubleshooting
-streamlit.stop()
+# streamlit.stop()
 
 # Allow the end user to ad a fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Jackfruit')
